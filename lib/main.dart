@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:university_bus_traking/pages/login_page.dart';
-import 'package:university_bus_traking/pages/registration_page.dart';
+import 'package:university_bus_traking/auth/login_page.dart';
+import 'package:university_bus_traking/auth/registration_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -19,9 +19,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Annimation',
       theme: ThemeData(
-        primaryColor: Colors.blue,
+        //primaryColor: Colors.blue,
+        primarySwatch: Colors.blue
       ),
       initialRoute: LoginPage.routeName,
       routes: {
